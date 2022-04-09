@@ -1,4 +1,8 @@
-const tmdbKey = 'f5f1b57d827cd44cbfb1ee29b25427da';
+import api_key from "./api_key";
+const api_key = api_key
+const envy = require('envy');
+const env = envy();
+
 const tmdbBaseUrl = 'https://api.themoviedb.org/3';
 const playBtn = document.getElementById('playBtn');
 
