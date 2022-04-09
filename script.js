@@ -1,6 +1,5 @@
-import {api_key} from "./api_key.js";
 
-const tmdbKey = api_key
+const tmdbKey = api_key;
 const tmdbBaseUrl = 'https://api.themoviedb.org/3';
 const playBtn = document.getElementById('playBtn');
 
@@ -27,7 +26,6 @@ const getMovies = async() => {
   const urlToFetch = `${tmdbBaseUrl}${discoverMovieEndpoint}${requestParams}`;
   try {
     const response = await fetch(urlToFetch);
-
     if (response.ok) {
       const jsonResponse = await response.json();
       const movies = jsonResponse.results
